@@ -1,7 +1,7 @@
 #Moshe Molcho Lab 5 a
 #Using a 1 dimensional array to print line without a loop.
 
-numbers = [ 2,4,6,8,10,12,14,16,18,20]
+numbers = [ 22,24,26,28,30,32,34,36,38,40]
 
 # Could have mathed it 2n... :)
 
