@@ -26,7 +26,7 @@ if choice == 1:
 
 elif choice ==2:
     print("Student list:")
-    for index in range(len(students)):
+    for index in range(5):
         print(index,students[index])
 
     index_number = int(input("Enter the index number to change: "))
@@ -39,7 +39,7 @@ elif choice ==2:
 
 elif choice==3:
     print("Student list:")
-    for index in range(len(students)):
+    for index in range(5):
         print(index, students[index])
 
     index_number = int(input("Enter the index number to remove: "))
