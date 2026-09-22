@@ -222,7 +222,7 @@ while play_again == "yes":
 #              DECISION 4
 #________________________________________
 
-         if escaped == True:
+        if escaped == True:
 
              print()
              print("You turn on the flashlight.")
@@ -240,7 +240,7 @@ while play_again == "yes":
 
             )
 
-             if choice == 3:
+            if choice == 3:
 
                  print()
                  print("CORRECT!!")
