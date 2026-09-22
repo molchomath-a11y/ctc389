@@ -224,31 +224,31 @@ while play_again == "yes":
 
         if escaped == True:
 
-             print()
-             print("You turn on the flashlight.")
-             print()
-             print("A secret message appears on the whiteboard.")
-             print()
-             print("The clown whispers:")
-             print('"FIND THE SHAPE WITH FOUR EQUAL SIDES..."')
+            print()
+            print("You turn on the flashlight.")
+            print()
+            print("A secret message appears on the whiteboard.")
+            print()
+            print("The clown whispers:")
+            print('"FIND THE SHAPE WITH FOUR EQUAL SIDES..."')
 
-             choice = make_choice(
-                     "DECISION 4: Which shape should you choose?",
-                     "Rectangle",
-                     "Triangle",
-                     "Square"
+            choice = make_choice(
+                    "DECISION 4: Which shape should you choose?",
+                    "Rectangle",
+                    "Triangle",
+                    "Square"
 
             )
 
             if choice == 3:
 
-                 print()
-                 print("CORRECT!!")
-                 print()
-                 print("You touch the square.")
-                 print("A section of the whiteboard slides open.")
-                 print()
-                 print("Behind it is a keypad.")
+                print()
+                print("CORRECT!!")
+                print()
+                print("You touch the square.")
+                print("A section of the whiteboard slides open.")
+                print()
+                print("Behind it is a keypad.")
 
             elif choice == 2:
                 escaped = game_over(
