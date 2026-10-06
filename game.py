@@ -1517,6 +1517,17 @@ def room16():
     
         # Keeps track of whether a player can continue.
         escaped = True
+
+        # Improvement #1 Inventory List
+        # This list stores items collected during the game.
+
+        inventory = []
+
+        # Improvement #3 - Puzzle Counter
+        # This new feature counts successful puzzles.
+
+        puzzles_solved = 0
+
     
         #___________________________
         #        DECISION #1
@@ -1544,6 +1555,13 @@ def room16():
             print("A not attached to it says:")
             print()
             print(' "ONE PUZZLE DOWN.... FOUR TO GO!!!!" ')
+
+            # Add the bronze key to the inventory list.
+            inventory.append("Bronze key")
+
+            # Correct answer to puzzle 1.
+            puzzles_solved = puzzles_solved + 1
+
     
         elif choice == 2:
     
@@ -1578,7 +1596,7 @@ def room16():
     
     
         if escaped == True:
-            print("The silver key opens a locked box.")
+            print("The bronze key opens a locked box.")
             print("Inside is a calculator.")
             print()
             print('The clown says, "SOLVE THIS OR STAY FOREVER!" ')
@@ -1597,6 +1615,14 @@ def room16():
                 print()
                 print("A hidden drawer opens.")
                 print("Inside is a red classroom pass.")
+
+                # Add the classroom pass to the invtory list.
+                inventory.append("Red classroom pass")
+
+                # Correct answer to puzzle 2.
+                puzzles_solved = puzzles_solved + 1
+
+
     
             elif choice == 1:
     
@@ -1645,6 +1671,13 @@ def room16():
                     print()
                     print("Locker 17 opens.")
                     print("Inside you find a flashlight.")
+
+
+                    # Add the flashlight to the inventory list
+                    inventory.append("Flashlight")
+
+                    #Correct answer to puzzle 3.
+                    puzzles_solved=puzzles_solved +1
     
                 elif choice ==1:
     
@@ -1690,13 +1723,17 @@ def room16():
     
                 if choice == 3:
     
-                     print()
-                     print("CORRECT!!")
-                     print()
-                     print("You touch the square.")
-                     print("A section of the whiteboard slides open.")
-                     print()
-                     print("Behind it is a keypad.")
+                    print()
+                    print("CORRECT!!")
+                    print()
+                    print("You touch the square.")
+                    print("A section of the whiteboard slides open.")
+                    print()
+                    print("Behind it is a keypad.")
+
+                    # Correct answer to puzzle 4.
+                    puzzles_solved = puzzles_solved+1
+
     
                 elif choice == 2:
                     escaped = game_over(
@@ -1764,6 +1801,10 @@ def room16():
                 print("            CONGRATULATIONS!")
                 print("     YOU ESCAPED THE MATH CLASS AND WIN!")
                 print("============================================")
+
+                # Correct Asnwer to puzzle number 5.
+                puzzles_solved = puzzles_solved + 1
+
                 
             elif choice == 1:
     
@@ -1771,7 +1812,7 @@ def room16():
                         'the clown says: \n'
                         '"3 TIMES 3 IS ONLY 9!"'
                     )
-    
+
             elif choice == 3:
     
                 escaped = game_over(
@@ -1789,6 +1830,27 @@ def room16():
     
     
     
+        #========================================
+        # Improvment #3 - Game Summary
+        # New feature that shows puzzles solved.
+        #========================================
+
+        print()
+        print("Puzzles solve: ",puzzles_solved)
+
+        print()
+        print("Items collected: ")
+
+        #=====================================
+        # Improvment #2 - New For Loop
+        #This loop goes through the inventory list
+        #and prints each item collected.
+        #=====================================
+
+        for item in inventory:
+            print(item)
+        print()
+
         play_again = input('Would you like to play again? "yes" or "no": ')
     
     
